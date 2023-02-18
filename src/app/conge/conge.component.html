@@ -1,0 +1,31 @@
+
+
+<form>
+  <h3 class="text-dark">Demander Congé</h3>
+  <div>
+     <input type="text" id="nom"  [(ngModel)]="newConge.employe.nom" name="employe" class="form-control"/>
+      <label for="nom">Nom</label>
+  </div>
+  <div>
+     <input type="text" id="prenom" [(ngModel)]="newConge.employe.prenom" name="dateDebut" class="form-control" />
+      <label for="prenom">Prénom</label>
+  </div>
+  <div>
+     <input type="date" id="mail"  [(ngModel)]="newConge.dateDebut" name="dateDebut" class="form-control" />
+      <label for="mail">Date début</label>
+  </div>
+  <div>
+      <input type="date" id="tel" [(ngModel)]="newConge.dateFin" name="dateFin" class="form-control" />
+        <label for="date">Date Fin</label>
+  </div>
+
+  <div>
+    <input type="text" id="tel" [(ngModel)]="newConge.typeCon" name="typeCon" class="form-control" />
+      <label for="tel">Type congé</label>
+</div>
+
+
+
+  <input class="button" type="submit" value="Envoyer" (click)="addConge()" />
+</form>
+

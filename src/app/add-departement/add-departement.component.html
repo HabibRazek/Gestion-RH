@@ -1,0 +1,41 @@
+<!-- <div class="container">
+    <div>
+        <h2>Ajouter un Département :</h2>
+    </div>
+    <form>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>ID Département</label>
+            <input type="number" [(ngModel)]="newDepartement.idDep" name="idDep" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom </label>
+            <input type="text" [(ngModel)]="newDepartement.nomDep" name="nomDep" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Description </label>
+            <input type="text" [(ngModel)]="newDepartement.descriptionDep" name="descriptionDep" class="form-control">
+        </div>
+
+        <div class="mt-2">
+            <button type="submit" class="btn btn-success" (click)="addDepartement()">Ajouter</button>
+        </div>
+    </form>
+</div> -->
+
+<form style="margin-left: 500px;">
+  <h3 style="color: #009acd;">Ajouter Department</h3>
+<div>
+  <input type="text" id="prenom" placeholder="ID Département" [(ngModel)]="newDepartement.idDep" name="idDep" class="form-control"/>
+       <label for="prenom">ID Département</label>
+</div>
+<div>
+  <input type="text" id="mail" placeholder="Nom"  [(ngModel)]="newDepartement.nomDep" name="nomDep" class="form-control"/>
+       <label for="mail">Nom</label>
+</div>
+<div>
+ <input type="text" id="6" placeholder="Description" [(ngModel)]="newDepartement.descriptionDep" name="descriptionDep" class="form-control"/>
+       <label for="6">Description</label>
+</div>
+ <br>
+<input class="button" type="submit" value="Envoyer" (click)="addDepartement()"/>
+</form>

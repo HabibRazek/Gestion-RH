@@ -1,0 +1,83 @@
+<div class="container">
+    <div>
+        <h2>Postuler</h2>
+    </div>
+    <form>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>CIN </label>
+            <input id="cin" type="text" [(ngModel)]="newCandidat.cin" name="cin" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Nom </label>
+            <input id="name" type="text" [(ngModel)]="newCandidat.nom" name="nom" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Prenom</label>
+            <input id="name" type="text" [(ngModel)]="newCandidat.prenom" name="prenom" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Date De Naissance</label>
+            <input id="date" type="date" [(ngModel)]="newCandidat.dateNai" name="dateNai" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>n° de Téléphone</label>
+            <input id="phone" type="number" [(ngModel)]="newCandidat.tel" name="tel" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Adresse</label>
+            <input id="adresse" type="text" [(ngModel)]="newCandidat.adresse" name="adresse" class="form-control">
+        </div>
+        <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>Email</label>
+            <input id="email" type="email" [(ngModel)]="newCandidat.email" name="email" class="form-control">
+        </div>
+<!--         <div class="col-sm-4 col-md-4 col-lg-4">
+            <label>CV</label>
+            <input type="file" [(ngModel)]="newCandidat.pdfFile" name="pdfFile" class="form-control">
+        </div> -->
+<!--         <div class="col-sm-4 col-md-4 col-lg-4" hidden>
+            <label>Etat</label>
+            <input  type="text" value="en attente" [(ngModel)]="newCandidat.etat" name="etat" class="form-control" >
+        
+        </div> -->
+
+        <div class="mt-2">
+            <button type="submit" class="btn btn-success" (click)="addCandidat()">Ajouter</button>
+        </div>
+
+    </form>
+</div>
+<script>
+    function validateForm() {
+      var name = document.forms["myForm"]["name"].value;
+      var email = document.forms["myForm"]["email"].value;
+      var telephone = document.forms["myForm"]["phone"].value;
+      var cin = document.forms["myForm"]["cin"].value;
+      var adresse = document.forms["myForm"]["adresse"].value;
+     
+      var date = document.forms["myForm"]["date"].value;
+      if (name == "" || email == "" || telephone == "" || cin == "" || adresse == ""  || date == "") {
+          alert("All fields must be filled out");
+          return false;
+      }
+      var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+if (!re.test(email)) {
+  alert("Invalid email address");
+  return false;
+
+}
+var re = /^\d{8}$/;
+if (!re.test(cin)) {
+  alert("Invalid CIN number, it must be 8 digits and no letters");
+  return false;
+}
+var re = /^\d{8}$/;
+if (!re.test(telephone)) {
+  alert("Invalid phone number, it must be 8 digits and no letters");
+  return false;
+    }
+
+    
+  }
+
+  </script>
